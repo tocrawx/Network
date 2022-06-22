@@ -11,6 +11,7 @@
      cisco.ios.ios_command:
       commands: show access-session | include Unauth
      register: output
+     
    - name: print output
-      debug:
-        var: output.stdout_lines
+     debug:
+       var: output.stdout_lines
