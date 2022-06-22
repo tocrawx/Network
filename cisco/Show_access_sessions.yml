@@ -10,3 +10,7 @@
    - name: run show access session
      cisco.ios.ios_command:
       commands: show access-session | include Unauth
+     register: output
+   - name: print output
+      debug:
+        var: output.stdout_lines
