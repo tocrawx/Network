@@ -11,5 +11,5 @@
       cisco.ios.ios_interfaces:
         config:
         - name: "{{ interface }}"
-          enabled: false
+          enabled: False
         state: merged
