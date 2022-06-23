@@ -1,0 +1,12 @@
+---
+
+- name: Gather_facts_about_a_swtich
+  hosts: "{{ host_name }}"
+  gather_facts: false
+
+
+  tasks:
+
+    - name: Gather all legacy facts
+      cisco.ios.ios_facts:
+        gather_subset: all
