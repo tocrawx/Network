@@ -1,0 +1,15 @@
+---
+
+- name: cisco_enable_disable_port
+  hosts: "{{ host_name }}"
+  gather_facts: false
+
+
+  tasks:
+
+    - name: Merge provided configuration with device configuration
+      cisco.ios.ios_interfaces:
+        config:
+        - name: GigabitEthernet1/0/10
+          enabled: false
+        state: merged
