@@ -15,4 +15,4 @@
          trunk:
            allowed_vlans: "{{ vlan_number }}"
            encapsulation: dot1q
-      state: merged
+       state: merged
