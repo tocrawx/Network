@@ -6,6 +6,12 @@
 
 
   tasks:
+    - name: Merge provided configuration with device configuration
+      cisco.ios.ios_interfaces:
+        config:
+        - name: "{{ port_number }}"
+          description: "{{ port_description }}"
+       state: merged
 
     - name: run trunk port configuation
       cisco.ios.ios_l2_interfaces:
