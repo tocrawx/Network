@@ -1,0 +1,12 @@
+---
+
+- name: Palo_gather_facts
+  hosts: "{{ host_name }}"
+  gather_facts: false
+
+
+  tasks:
+
+   - name: Get Facts
+     panos_facts:
+      gather_subset: ['config']
