@@ -8,3 +8,4 @@ collections:
   - cisco.nso
   - cisco.nxos
   - cisco.ucs
+  - paloaltonetworks.panos
