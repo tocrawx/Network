@@ -13,6 +13,8 @@
         - name: "{{ interface }}"
           enabled: False
         state: merged
+        
+    - name: pause playbook
       ansible.builtin.pause:
         seconds: 10
         
