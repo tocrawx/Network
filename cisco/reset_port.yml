@@ -7,13 +7,18 @@
 
   tasks:
 
-    - name: Merge provided configuration with device configuration
+    - name: Shutdown port
       cisco.ios.ios_interfaces:
         config:
         - name: "{{ interface }}"
           enabled: False
         state: merged
+      ansible.builtin.pause:
+        seconds: 10
+        
+    - name: No Shutdown port
+      cisco.ios.ios_interfaces:
         config:
         - name: "{{ interface }}"
-          enabled: True
+          enabled: true
         state: merged
