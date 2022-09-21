@@ -9,7 +9,7 @@
 
    - name: run show access session
      cisco.ios.ios_command:
-      commands: show run | include {{"ip_address"}}
+      commands: show run | include "{{ip_address}}"
      register: output
      
    - name: print output
